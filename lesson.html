@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Bài Giảng</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 p-4 md:p-10">
+
+    <div class="max-w-5xl mx-auto">
+        <a href="index.html" class="inline-flex items-center gap-2 text-blue-600 font-medium mb-6 hover:text-blue-800 transition">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại Bảng điều khiển
+        </a>
+        
+        <div class="bg-white rounded-3xl p-6 md:p-8 shadow-xs border border-gray-100">
+            <h1 id="lesson-title" class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">Đang tải tiêu đề bài học...</h1>
+            
+            <div class="aspect-video w-full mb-8 bg-black rounded-2xl overflow-hidden shadow-md">
+                <iframe id="youtube-player" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="border-t border-gray-100 pt-6">
+                <h3 class="text-lg font-bold text-gray-900 mb-3">💡 Hướng dẫn học tập hiệu quả:</h3>
+                <ul class="space-y-2 text-gray-600 text-sm list-disc pl-5">
+                    <li>Hãy chuẩn bị một cuốn sổ tay nhỏ để ghi lại những từ khóa quan trọng trong video.</li>
+                    <li>Tập trung theo dõi hết thời lượng bài giảng để không bỏ sót các mẹo thực hành kỹ năng.</li>
+                    <li>Sau khi xem xong, hãy quay lại màn hình chính để thực hiện các nhiệm vụ thử thách ngày.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Đoạn code JavaScript thông minh tự động đọc dữ liệu từ URL để đổi Video và Tiêu đề
+        function loadLessonData() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Lấy mã video và tiêu đề từ URL truyền sang
+            const videoId = urlParams.get('v');
+            const title = urlParams.get('title');
+            
+            if (videoId && title) {
+                // Cập nhật tiêu đề trên trang
+                document.getElementById('lesson-title').innerText = decodeURIComponent(title);
+                // Cập nhật link nhúng mã video YouTube tương ứng
+                document.getElementById('youtube-player').src = `https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1`;
+                // Đổi cả tiêu đề tab trình duyệt
+                document.title = decodeURIComponent(title);
+            } else {
+                // Trường hợp lỗi hoặc truy cập thẳng không qua trang chủ
+                document.getElementById('lesson-title').innerText = "Không tìm thấy dữ liệu bài học này!";
+            }
+        }
+
+        // Chạy hàm khi trang web được tải xong
+        window.onload = loadLessonData;
+    </script>
+</body>
+</html>
