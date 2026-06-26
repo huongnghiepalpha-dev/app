@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Điều Hành Hướng Nghiệp & Kỹ Năng Alpha</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800 min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+
+    <div class="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-blue-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-[10%] right-[-10%] w-[30rem] h-[30rem] bg-purple-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <header class="max-w-7xl mx-auto w-full px-6 py-4 flex justify-between items-center bg-transparent z-10">
+        <div class="flex items-center gap-2">
+            <div class="bg-blue-600 text-white p-2 rounded-xl font-black text-lg shadow-sm">α</div>
+            <span class="text-lg font-black text-slate-900 tracking-tight">Alpha School</span>
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+            <a href="#" class="hover:text-blue-600 transition">Khóa học</a>
+            <a href="#" class="hover:text-blue-600 transition">Chương trình</a>
+            <a href="#" class="hover:text-blue-600 transition">Học phí</a>
+        </nav>
+
+        <a href="dashboard.html" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold px-5 py-2.5 rounded-xl shadow-md shadow-blue-500/20 transition">
+            Đăng nhập
+        </a>
+    </header>
+
+    <main class="max-w-4xl mx-auto text-center px-4 py-12 md:py-20 z-10 my-auto">
+        <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold px-4 py-1.5 rounded-full mb-6 shadow-xs">
+            <span class="w-1.5 h-1.5 bg-blue-500 rounded-full animate-ping"></span>
+            Alpha School Micro Learning
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 leading-tight mb-6 tracking-tight">
+            Hệ Điều Hành <br class="hidden sm:block"> Tư Duy & Hướng Nghiệp
+        </h1>
+
+        <p class="text-base md:text-lg text-slate-600 font-medium max-w-2xl mx-auto mb-2">
+            3 Chặng Chuyên Sâu • Lộ trình từ Học sinh đến Công dân toàn cầu tương lai • Học mọi lúc, mọi nơi.
+        </p>
+        <p class="text-sm text-slate-400 font-medium max-w-2xl mx-auto mb-10">
+            Video ngắn 5 phút • Thử thách tương tác • Gamification giữ bạn tiến bộ mỗi ngày.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <a href="dashboard.html" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg shadow-blue-500/20 transition flex items-center justify-center gap-2">
+                Khám phá ngay (Miễn phí) <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a href="#" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 font-bold px-8 py-3.5 rounded-xl border border-slate-200 shadow-xs transition">
+                Xem lộ trình năng lực
+            </a>
+        </div>
+
+        <div class="bg-white border border-slate-100 rounded-2xl p-6 md:p-8 shadow-xl shadow-slate-200/50 max-w-2xl mx-auto grid grid-cols-3 gap-4">
+            <div class="text-center border-r border-slate-100">
+                <div class="w-9 h-9 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-2 text-sm"><i class="fa-solid fa-book-open"></i></div>
+                <p class="text-lg md:text-xl font-black text-slate-800">50+</p>
+                <p class="text-[10px] md:text-xs text-slate-400 font-semibold uppercase tracking-wider">Bài giảng</p>
+            </div>
+            <div class="text-center border-r border-slate-100">
+                <div class="w-9 h-9 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-2 text-sm"><i class="fa-solid fa-layer-group"></i></div>
+                <p class="text-lg md:text-xl font-black text-slate-800">3</p>
+                <p class="text-[10px] md:text-xs text-slate-400 font-semibold uppercase tracking-wider">Chặng rèn luyện</p>
+            </div>
+            <div class="text-center">
+                <div class="w-9 h-9 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-2 text-sm"><i class="fa-solid fa-graduation-cap"></i></div>
+                <p class="text-lg md:text-xl font-black text-slate-800">1,200+</p>
+                <p class="text-[10px] md:text-xs text-slate-400 font-semibold uppercase tracking-wider">Học sinh</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-transparent border-t border-slate-200/40 py-6 z-10">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-12 text-xs md:text-sm font-bold text-slate-600">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Mở ngay trên Điện thoại/Web
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Học từ 5-15 phút/ngày
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Nội dung thực chiến cho Teen
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="fixed bottom-6 right-6 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-black shadow-lg hover:bg-blue-600 transition z-50">
+        Zalo
+    </a>
+
+</body>
+</html>
