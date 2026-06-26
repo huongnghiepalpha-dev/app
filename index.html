@@ -20,9 +20,8 @@
                     <div class="bg-blue-600 text-white p-2 rounded-lg font-bold text-xl">K</div>
                     <span class="text-xl font-bold text-gray-900">Kỹ Năng & Nghề</span>
                 </div>
-                
                 <nav class="space-y-2">
-                    <a href="#" class="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-xl font-medium">
+                    <a href="index.html" class="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-xl font-medium">
                         <i class="fa-solid fa-chart-pie w-5"></i> Dashboard
                     </a>
                     <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-xl transition">
@@ -34,12 +33,8 @@
                     <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-xl transition">
                         <i class="fa-solid fa-trophy w-5"></i> Bảng xếp hạng
                     </a>
-                    <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-xl transition">
-                        <i class="fa-solid fa-id-card w-5"></i> Hồ sơ năng lực
-                    </a>
                 </nav>
             </div>
-            
             <div class="p-4 m-4 bg-orange-50 rounded-2xl border border-orange-100">
                 <div class="flex items-center gap-3 text-orange-600">
                     <i class="fa-solid fa-fire text-2xl animate-pulse"></i>
@@ -52,15 +47,10 @@
         </div>
 
         <div class="flex-1 overflow-y-auto p-4 md:p-8">
-            
             <header class="flex justify-between items-center mb-8">
                 <h1 class="text-xl font-bold md:hidden text-blue-600">Kỹ Năng & Nghề</h1>
-                <div class="hidden md:block"></div>
+                <div></div>
                 <div class="flex items-center gap-4">
-                    <button class="p-2 text-gray-400 hover:text-gray-600 relative">
-                        <i class="fa-solid fa-bell text-xl"></i>
-                        <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
-                    </button>
                     <div class="flex items-center gap-2 border-l pl-4 border-gray-200">
                         <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80" alt="Avatar" class="w-8 h-8 rounded-full border">
                         <span class="font-medium text-sm hidden sm:inline text-gray-700">Nguyễn Hoàng Nam</span>
@@ -70,132 +60,67 @@
 
             <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-6 md:p-8 border border-blue-100/50 mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                 <div>
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-950 mb-2">Chào buổi sáng, Hoàng Nam! 👋</h2>
-                    <p class="text-gray-600">Hôm nay bạn muốn rèn luyện kỹ năng nào? Đi từng bước nhỏ để kiến tạo tương lai nhé.</p>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-950 mb-2">Chào buổi sáng! 👋</h2>
+                    <p class="text-gray-600">Chọn một bài học dưới đây để tiếp tục hành trình khám phá bản thân.</p>
                 </div>
                 <div class="flex gap-4 w-full md:w-auto">
                     <div class="bg-white p-4 rounded-2xl shadow-sm flex-1 md:w-32 text-center border border-gray-100">
-                        <p class="text-xs text-gray-400 uppercase font-bold tracking-wider mb-1">Hôm nay</p>
-                        <p class="text-xl font-bold text-gray-900" id="today-task">0/1 Bài</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-2xl shadow-sm flex-1 md:w-32 text-center border border-gray-100">
                         <p class="text-xs text-gray-400 uppercase font-bold tracking-wider mb-1">Tích lũy</p>
-                        <p class="text-xl font-bold text-indigo-600" id="total-xp">+120 XP</p>
+                        <p class="text-xl font-bold text-indigo-600">+120 XP</p>
                     </div>
                     <div class="bg-white p-4 rounded-2xl shadow-sm flex-1 md:w-32 text-center border border-gray-100">
                         <p class="text-xs text-gray-400 uppercase font-bold tracking-wider mb-1">Chuỗi lửa</p>
-                        <p class="text-xl font-bold text-orange-500" id="streak-count">1 Ngày</p>
+                        <p class="text-xl font-bold text-orange-500">1 Ngày</p>
                     </div>
                 </div>
             </div>
 
-            <h3 class="text-lg font-bold text-gray-900 mb-4">Tiến độ & Chỉ số học tập</h3>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl"><i class="fa-solid fa-book-open"></i></div>
-                    <div><p class="text-xs text-gray-400 font-medium">Đang học</p><p class="text-lg font-bold">2 Chặng</p></div>
-                </div>
-                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl"><i class="fa-solid fa-circle-check"></i></div>
-                    <div><p class="text-xs text-gray-400 font-medium">Đã xong</p><p class="text-lg font-bold">4 Bài</p></div>
-                </div>
-                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl"><i class="fa-solid fa-clock"></i></div>
-                    <div><p class="text-xs text-gray-400 font-medium">Thời gian</p><p class="text-lg font-bold">45 Phút</p></div>
-                </div>
-                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl"><i class="fa-solid fa-award"></i></div>
-                    <div><p class="text-xs text-gray-400 font-medium">Chứng chỉ</p><p class="text-lg font-bold">1 Bản</p></div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                
-                <div class="lg:col-span-2">
-                    <h3 class="text-lg font-bold text-gray-900 mb-4">Lộ trình rèn luyện dài hạn của bạn</h3>
-                    <div class="space-y-4">
-                        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-xs flex justify-between items-center hover:border-blue-200 transition">
-                            <div class="flex gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold">01</div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900">Trạm 1: Thấu hiểu & Quản trị bản thân</h4>
-                                    <p class="text-xs text-gray-500 mt-1">Đang diễn ra • Tiến độ 60%</p>
-                                    <div class="w-48 bg-gray-100 h-1.5 rounded-full mt-2 overflow-hidden">
-                                        <div class="bg-blue-600 h-full w-[60%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button onclick="completeLesson()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap">Học tiếp</button>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-xs flex justify-between items-center opacity-75">
-                            <div class="flex gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-gray-200 text-gray-600 flex items-center justify-center font-bold"><i class="fa-solid fa-lock"></i></div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900">Trạm 2: Kỹ năng Tương tác & Thích ứng</h4>
-                                    <p class="text-xs text-gray-400 mt-1">Chưa mở khóa • Yêu cầu hoàn thành Trạm 1</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-xs flex justify-between items-center opacity-75">
-                            <div class="flex gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-gray-200 text-gray-600 flex items-center justify-center font-bold"><i class="fa-solid fa-lock"></i></div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900">Trạm 3: Hiện thực hóa Ước mơ (Chọn Nghề)</h4>
-                                    <p class="text-xs text-gray-400 mt-1">Chưa mở khóa</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="grid grid-cols-1 gap-6">
                 <div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-4">Nhiệm vụ hôm nay</h3>
-                    <div class="bg-white p-6 rounded-2xl border border-gray-200 text-center">
-                        <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
-                            <i class="fa-solid fa-lightbulb"></i>
-                        </div>
-                        <h4 class="font-bold text-gray-900 mb-1">Tình huống Tư duy Phản biện</h4>
-                        <p class="text-xs text-gray-500 mb-4">Làm thế nào để từ chối lời rủ đi chơi game của bạn thân khi ngày mai thi học kỳ?</p>
-                        <button onclick="completeTask()" id="btn-quiz" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition">
-                            Giải quyết ngay (+20 XP)
-                        </button>
-                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Danh sách bài giảng video của bạn</h3>
+                    
+                    <div id="learning-path-container" class="space-y-4"></div>
                 </div>
-
             </div>
+
         </div>
     </div>
 
     <script>
-        let currentXp = 120;
-        let currentStreak = 1;
-        let taskCompleted = false;
+        // Cấu hình thông tin 3 video YouTube của bạn vào đây
+        const myLessons = [
+            { id: 1, title: "Bài 1: Hướng nghiệp và Kỹ năng thiết yếu cho học sinh", duration: "12 phút", videoId: "7ZP7aem_FOU" },
+            { id: 2, title: "Bài 2: Phương pháp tư duy & Lựa chọn tương lai", duration: "15 phút", videoId: "taasiTENJc0" },
+            { id: 3, title: "Bài 3: Cẩm nang phát triển năng lực bản thân", duration: "10 phút", videoId: "KrNLHPT2aJw" }
+        ];
 
-        function completeTask() {
-            if(!taskCompleted) {
-                currentXp += 20;
-                currentStreak += 1;
-                taskCompleted = true;
+        function renderLessons() {
+            const container = document.getElementById('learning-path-container');
+            container.innerHTML = myLessons.map(lesson => {
+                // Tạo đường link truyền tham số sang trang lesson.html
+                const lessonUrl = `lesson.html?v=${lesson.videoId}&title=${encodeURIComponent(lesson.title)}`;
                 
-                // Cập nhật giao diện trực tiếp
-                document.getElementById('total-xp').innerText = `+${currentXp} XP`;
-                document.getElementById('streak-count').innerText = `${currentStreak} Ngày`;
-                document.getElementById('streak-badge').innerText = currentStreak;
-                document.getElementById('today-task').innerText = `1/1 Bài`;
-                
-                // Đổi trạng thái nút bấm
-                const btn = document.getElementById('btn-quiz');
-                btn.innerText = "Đã hoàn thành! 🎉";
-                btn.className = "w-full bg-emerald-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm cursor-not-allowed";
-                btn.disabled = true;
-            }
+                return `
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-xs flex justify-between items-center hover:border-blue-200 transition">
+                        <div class="flex gap-4 items-center">
+                            <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg">
+                                0${lesson.id}
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-base md:text-lg">${lesson.title}</h4>
+                                <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-clock mr-1"></i> Thời lượng: ${lesson.duration} • Video chất lượng cao</p>
+                            </div>
+                        </div>
+                        <a href="${lessonUrl}" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap">
+                            Vào học <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                `;
+            }).join('');
         }
-
-        function completeLesson() {
-            alert("Hệ thống chuyển hướng bạn đến bài học tiếp theo: Kỹ năng Quản lý thời gian bằng Ma trận Eisenhower!");
-        }
+        
+        // Chạy hàm hiển thị dữ liệu
+        renderLessons();
     </script>
 </body>
 </html>
