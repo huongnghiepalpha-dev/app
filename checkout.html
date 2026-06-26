@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán Học Phí - Hướng Nghiệp Alpha</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-4 relative overflow-x-hidden">
+
+    <div class="absolute top-[-10%] left-[-10%] w-[30rem] h-[30rem] bg-blue-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[30rem] h-[30rem] bg-purple-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-5 gap-6 z-10 my-6">
+        
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-xl md:col-span-3 flex flex-col justify-between">
+            <div>
+                <div class="flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-circle-check"></i> Đăng ký thành công! Bước cuối cùng:
+                </div>
+                <h2 class="text-xl md:text-2xl font-black text-slate-900 leading-tight">Quét mã QR để mở khóa học</h2>
+                <p class="text-xs text-slate-500 mt-1 mb-6">Hệ thống sẽ phê duyệt kích hoạt ngay sau khi nhận được khoản thanh toán.</p>
+                
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4 max-w-xs mx-auto text-center shadow-xs mb-6">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=AlphaSchoolPayment" alt="Mã QR Ngân Hàng" class="w-full h-auto rounded-xl mx-auto border bg-white p-2">
+                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-2 flex items-center justify-center gap-1">
+                        <i class="fa-solid fa-qrcode text-xs"></i> Quét qua ứng dụng Ngân hàng / Ví điện tử
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50/50 border border-blue-100 rounded-2xl p-4 text-xs text-slate-600 space-y-1.5">
+                <p class="font-bold text-blue-700 flex items-center gap-1.5"><i class="fa-solid fa-circle-info"></i> Lưu ý quan trọng:</p>
+                <p>• Vui lòng giữ nguyên nội dung chuyển khoản để hệ thống đối chiếu số điện thoại tự động.</p>
+                <p>• Sau khi chuyển khoản thành công, tài khoản của bạn sẽ được kích hoạt trong vòng 1-5 phút.</p>
+            </div>
+        </div>
+
+        <div class="space-y-4 md:col-span-2">
+            
+            <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-6 text-center shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 bg-white/5 rounded-full blur-xl"></div>
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Ưu đãi hết hạn sau</p>
+                <div class="text-3xl font-black font-mono text-amber-400 tracking-wider my-3" id="countdown-timer">10:00</div>
+                <p class="text-[11px] text-slate-400 px-4 leading-relaxed">Hãy hoàn thành giao dịch trong thời gian này để được giữ mức giá ưu đãi dành riêng cho học sinh mới.</p>
+            </div>
+
+            <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-xl space-y-4">
+                <h3 class="text-sm font-extrabold text-slate-900 uppercase tracking-wider pb-2 border-b border-slate-100">Thông tin đơn hàng</h3>
+                
+                <div class="flex justify-between items-center text-sm">
+                    <span class="text-slate-500 font-medium">Khóa học:</span>
+                    <span class="font-bold text-slate-800 text-right text-xs">Lộ trình Hướng nghiệp Toàn diện</span>
+                </div>
+                
+                <div class="flex justify-between items-center text-sm">
+                    <span class="text-slate-500 font-medium">Học phí ưu đãi:</span>
+                    <span class="text-lg font-black text-blue-600">199.000 đ</span>
+                </div>
+
+                <div class="border-t border-dashed border-slate-200 pt-4 space-y-3">
+                    <p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Hoặc chuyển khoản thủ công:</p>
+                    
+                    <div class="text-xs bg-slate-50 p-2.5 rounded-xl border border-slate-100 flex justify-between items-center">
+                        <div>
+                            <p class="text-slate-400 font-medium">Ngân hàng</p>
+                            <p class="font-bold text-slate-800 mt-0.5">MB BANK (Quân Đội)</p>
+                        </div>
+                    </div>
+
+                    <div class="text-xs bg-slate-50 p-2.5 rounded-xl border border-slate-100 flex justify-between items-center">
+                        <div>
+                            <p class="text-slate-400 font-medium">Số tài khoản</p>
+                            <p id="account-num" class="font-black text-slate-900 text-sm mt-0.5 tracking-wider">0987654321</p>
+                        </div>
+                        <button onclick="copyText('account-num', this)" class="text-blue-600 hover:text-blue-800 font-bold bg-white px-2.5 py-1.5 rounded-lg border border-slate-200 shadow-2xs cursor-pointer transition">Copy</button>
+                    </div>
+
+                    <div class="text-xs bg-slate-50 p-2.5 rounded-xl border border-slate-100 flex justify-between items-center">
+                        <div>
+                            <p class="text-slate-400 font-medium">Chủ tài khoản</p>
+                            <p class="font-bold text-slate-800 mt-0.5 uppercase">TRẦN ĐĂNG</p>
+                        </div>
+                    </div>
+
+                    <div class="text-xs bg-slate-50 p-2.5 rounded-xl border border-slate-100 flex justify-between items-center">
+                        <div>
+                            <p class="text-slate-400 font-medium">Nội dung bắt buộc</p>
+                            <p id="transfer-code" class="font-black text-purple-700 text-sm mt-0.5 tracking-wider">ALPHASCHOOL</p>
+                        </div>
+                        <button onclick="copyText('transfer-code', this)" class="text-blue-600 hover:text-blue-800 font-bold bg-white px-2.5 py-1.5 rounded-lg border border-slate-200 shadow-2xs cursor-pointer transition">Copy</button>
+                    </div>
+                </div>
+
+                <a href="dashboard.html" class="w-full bg-slate-900 hover:bg-slate-800 text-white text-center block font-bold py-3 px-4 rounded-xl text-xs transition mt-2">
+                    Tôi đã chuyển khoản thành công <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Xử lý đồng hồ đếm ngược 10 phút (600 giây)
+        let timeInSeconds = 600;
+        const timerElement = document.getElementById('countdown-timer');
+
+        const countdown = setInterval(() => {
+            let minutes = Math.floor(timeInSeconds / 60);
+            let seconds = timeInSeconds % 60;
+
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            timerElement.innerText = `${minutes}:${seconds}`;
+
+            if (timeInSeconds <= 0) {
+                clearInterval(countdown);
+                timerElement.innerText = "HẾT HẠN ƯU ĐÃI";
+                timerElement.className = "text-xl font-bold text-red-500 my-3";
+            }
+            timeInSeconds--;
+        }, 1000);
+
+        // 2. Hàm xử lý chức năng sao chép (Copy) văn bản nhanh bằng một click
+        function copyText(elementId, button) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = button.innerText;
+                button.innerText = "Đã Copy! ✓";
+                button.className = "text-emerald-600 font-bold bg-emerald-50 px-2.5 py-1.5 rounded-lg border border-emerald-200 shadow-2xs transition";
+                
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.className = "text-blue-600 hover:text-blue-800 font-bold bg-white px-2.5 py-1.5 rounded-lg border border-slate-200 shadow-2xs transition";
+                }, 2000);
+            }).catch(err => {
+                console.error("Lỗi không copy được: ", err);
+            });
+        }
+    </script>
+</body>
+</html>
