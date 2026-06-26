@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Học Tập & Hướng Nghiệp</title>
+    <title>Dashboard - Hướng Nghiệp Alpha</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -14,14 +14,18 @@
 
     <div class="flex h-screen overflow-hidden">
         
-        <div class="w-64 bg-white border-r border-gray-200 flex flex-col justify-between hidden md:flex">
+        <div class="w-64 bg-white border-r border-gray-200 flex flex-col justify-between hidden md:flex shrink-0">
             <div class="p-6">
                 <div class="flex items-center gap-3 mb-8">
-                    <div class="bg-blue-600 text-white p-2 rounded-lg font-bold text-xl">K</div>
-                    <span class="text-xl font-bold text-gray-900">Kỹ Năng & Nghề</span>
+                    <img src="logo.jpg" alt="Logo Hướng Nghiệp Alpha" class="w-10 h-10 rounded-xl object-contain shadow-xs">
+                    <div class="flex flex-col">
+                        <span class="text-sm font-black text-slate-900 tracking-tight leading-none">Alpha School</span>
+                        <span class="text-[10px] text-amber-500 font-bold mt-1">Hướng Nghiệp Chuyên Sâu</span>
+                    </div>
                 </div>
+                
                 <nav class="space-y-2">
-                    <a href="index.html" class="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-xl font-medium">
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-xl font-medium">
                         <i class="fa-solid fa-chart-pie w-5"></i> Dashboard
                     </a>
                     <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-xl transition">
@@ -35,92 +39,139 @@
                     </a>
                 </nav>
             </div>
+            
             <div class="p-4 m-4 bg-orange-50 rounded-2xl border border-orange-100">
                 <div class="flex items-center gap-3 text-orange-600">
                     <i class="fa-solid fa-fire text-2xl animate-pulse"></i>
                     <div>
                         <p class="text-xs text-orange-500 font-medium">Chuỗi học tập</p>
-                        <p class="text-lg font-bold"><span id="streak-badge">1</span> Ngày liên tiếp</p>
+                        <p class="text-lg font-bold">1 Ngày liên tiếp</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="flex-1 overflow-y-auto p-4 md:p-8">
-            <header class="flex justify-between items-center mb-8">
-                <h1 class="text-xl font-bold md:hidden text-blue-600">Kỹ Năng & Nghề</h1>
-                <div></div>
-                <div class="flex items-center gap-4">
-                    <div class="flex items-center gap-2 border-l pl-4 border-gray-200">
-                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80" alt="Avatar" class="w-8 h-8 rounded-full border">
-                        <span class="font-medium text-sm hidden sm:inline text-gray-700">Nguyễn Hoàng Nam</span>
+        <div class="flex-1 overflow-y-auto flex flex-col justify-between">
+            
+            <div class="p-4 md:p-8">
+                <header class="flex justify-between items-center mb-8">
+                    <div class="flex items-center gap-2 md:hidden">
+                        <img src="logo.jpg" alt="Logo" class="w-8 h-8 object-contain">
+                        <h1 class="text-base font-black text-blue-600">Alpha School</h1>
                     </div>
-                </div>
-            </header>
+                    <div></div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2 border-l pl-4 border-gray-200">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80" alt="Avatar" class="w-8 h-8 rounded-full border">
+                            <span class="font-medium text-sm hidden sm:inline text-gray-700">Nguyễn Hoàng Nam</span>
+                        </div>
+                    </div>
+                </header>
 
-            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-6 md:p-8 border border-blue-100/50 mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                <div>
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-950 mb-2">Chào buổi sáng! 👋</h2>
-                    <p class="text-gray-600">Chọn một bài học dưới đây để tiếp tục hành trình khám phá bản thân.</p>
-                </div>
-                <div class="flex gap-4 w-full md:w-auto">
-                    <div class="bg-white p-4 rounded-2xl shadow-sm flex-1 md:w-32 text-center border border-gray-100">
-                        <p class="text-xs text-gray-400 uppercase font-bold tracking-wider mb-1">Tích lũy</p>
-                        <p class="text-xl font-bold text-indigo-600">+120 XP</p>
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-6 md:p-8 border border-blue-100/50 mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-950 mb-2">Chào buổi sáng, Hoàng Nam! 👋</h2>
+                        <p class="text-gray-600">Hôm nay bạn muốn rèn luyện kỹ năng nào? Đi từng bước nhỏ để kiến tạo tương lai nhé.</p>
                     </div>
-                    <div class="bg-white p-4 rounded-2xl shadow-sm flex-1 md:w-32 text-center border border-gray-100">
-                        <p class="text-xs text-gray-400 uppercase font-bold tracking-wider mb-1">Chuỗi lửa</p>
-                        <p class="text-xl font-bold text-orange-500">1 Ngày</p>
+                    <div class="flex gap-4 w-full md:w-auto">
+                        <div class="bg-white p-4 rounded-2xl shadow-sm flex-1 md:w-32 text-center border border-gray-100">
+                            <p class="text-xs text-gray-400 uppercase font-bold tracking-wider mb-1">Hôm nay</p>
+                            <p class="text-xl font-bold text-gray-900">0/1 Bài</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl shadow-sm flex-1 md:w-32 text-center border border-gray-100">
+                            <p class="text-xs text-gray-400 uppercase font-bold tracking-wider mb-1">Tích lũy</p>
+                            <p class="text-xl font-bold text-indigo-600">+120 XP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+                    <div class="lg:col-span-2 space-y-4">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Lộ trình rèn luyện dài hạn của bạn</h3>
+                        
+                        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-xs flex justify-between items-center hover:border-blue-200 transition">
+                            <div class="flex gap-4 items-center">
+                                <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg">01</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Bài 1: Hướng nghiệp và Kỹ năng thiết yếu cho học sinh</h4>
+                                    <p class="text-xs text-gray-500 mt-1">Đang diễn ra • Tiến độ 60%</p>
+                                </div>
+                            </div>
+                            <a href="lesson.html?v=7ZP7aem_FOU&title=Bài%201%3A%20Hướng%20ng nghiệp%20và%20Kỹ%20năng%20thiết%20yếu" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap">Học tiếp</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Nhiệm vụ hôm nay</h3>
+                        <div class="bg-white p-6 rounded-2xl border border-gray-200 text-center">
+                            <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-xl mx-auto mb-3"><i class="fa-solid fa-lightbulb"></i></div>
+                            <h4 class="font-bold text-gray-900 text-sm mb-1">Tình huống ứng xử</h4>
+                            <p class="text-xs text-gray-500 mb-4">Làm thế nào để từ chối lời rủ đi chơi game của bạn thân khi ngày mai thi học kỳ?</p>
+                            <button class="w-full bg-orange-500 text-white font-bold py-2 px-4 rounded-xl text-xs">Giải quyết (+20 XP)</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 gap-6">
-                <div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-4">Danh sách bài giảng video của bạn</h3>
+            <footer class="bg-white border-t border-gray-200 w-full pt-12 pb-6 px-6 md:px-12 mt-auto">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-gray-100">
                     
-                    <div id="learning-path-container" class="space-y-4"></div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2">
+                            <img src="logo.jpg" alt="Logo" class="w-8 h-8 object-contain">
+                            <span class="text-base font-black text-slate-900">Hướng Nghiệp Alpha</span>
+                        </div>
+                        <p class="text-xs text-gray-500 leading-relaxed font-medium">
+                            Nền tảng microlearning giúp bạn định hướng bản thân mỗi ngày với chuỗi video ngắn, thử thách thực tế độc quyền cho học sinh.
+                        </p>
+                        <p class="text-xs font-bold text-amber-500 italic">"Biến ước mơ thành sự nghiệp"</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">Học tập</h4>
+                        <ul class="space-y-2.5 text-xs text-gray-500 font-medium">
+                            <li><a href="#" class="hover:text-blue-600 transition">Khóa học kỹ năng</a></li>
+                            <li><a href="#" class="hover:text-blue-600 transition">Chương trình dài hạn</a></li>
+                            <li><a href="#" class="hover:text-blue-600 transition">Bảng xếp hạng tuần</a></li>
+                            <li><a href="#" class="hover:text-blue-600 transition">Chính sách học phí</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">Hỗ trợ</h4>
+                        <ul class="space-y-2.5 text-xs text-gray-500 font-medium">
+                            <li><a href="#" class="hover:text-blue-600 transition">Câu hỏi thường gặp (FAQ)</a></li>
+                            <li class="flex items-center gap-1.5 text-slate-700 font-bold"><i class="fa-solid fa-phone text-blue-600"></i> Hotline: 096 937 4411</li>
+                            <li class="flex items-center gap-1.5"><i class="fa-regular fa-envelope text-gray-400"></i> huongnghiepalpha@gmail.com</li>
+                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-globe text-gray-400"></i> www.huongnghiepalpha.vn</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">Kênh truyền thông</h4>
+                        <div class="flex items-start gap-3">
+                            <div class="w-16 h-16 bg-gray-100 border p-1 rounded-lg shrink-0">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.huongnghiepalpha.vn" alt="QR Link" class="w-full h-full object-contain">
+                            </div>
+                            <p class="text-[11px] text-gray-400 leading-normal">
+                                Quét mã QR bằng điện thoại để truy cập nhanh hệ thống thông tin cẩm nang hướng nghiệp trên trình duyệt di động.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+                <div class="max-w-7xl mx-auto pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400 font-medium">
+                    <p>© 2026 Hướng Nghiệp Alpha. All rights reserved.</p>
+                    <div class="flex items-center gap-1">
+                        <span>Made with</span>
+                        <i class="fa-solid fa-heart text-red-500"></i>
+                        <span>in Vietnam</span>
+                    </div>
+                </div>
+            </footer>
 
         </div>
     </div>
 
-    <script>
-        // Cấu hình thông tin 3 video YouTube của bạn vào đây
-        const myLessons = [
-            { id: 1, title: "Bài 1: Hướng nghiệp và Kỹ năng thiết yếu cho học sinh", duration: "12 phút", videoId: "7ZP7aem_FOU" },
-            { id: 2, title: "Bài 2: Phương pháp tư duy & Lựa chọn tương lai", duration: "15 phút", videoId: "taasiTENJc0" },
-            { id: 3, title: "Bài 3: Cẩm nang phát triển năng lực bản thân", duration: "10 phút", videoId: "KrNLHPT2aJw" }
-        ];
-
-        function renderLessons() {
-            const container = document.getElementById('learning-path-container');
-            container.innerHTML = myLessons.map(lesson => {
-                // Tạo đường link truyền tham số sang trang lesson.html
-                const lessonUrl = `lesson.html?v=${lesson.videoId}&title=${encodeURIComponent(lesson.title)}`;
-                
-                return `
-                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-xs flex justify-between items-center hover:border-blue-200 transition">
-                        <div class="flex gap-4 items-center">
-                            <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg">
-                                0${lesson.id}
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 text-base md:text-lg">${lesson.title}</h4>
-                                <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-clock mr-1"></i> Thời lượng: ${lesson.duration} • Video chất lượng cao</p>
-                            </div>
-                        </div>
-                        <a href="${lessonUrl}" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-xs font-bold transition whitespace-nowrap">
-                            Vào học <i class="fa-solid fa-arrow-right ml-1"></i>
-                        </a>
-                    </div>
-                `;
-            }).join('');
-        }
-        
-        // Chạy hàm hiển thị dữ liệu
-        renderLessons();
-    </script>
 </body>
 </html>
